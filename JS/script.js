@@ -83,11 +83,23 @@ $(document).ready(function() {
               $(".buttons-1").fadeIn("slow")
               $(".buttons-2").fadeOut("")
           };
-    var winner = player1.scoreCheck;
+        var winner = player1.scoreCheck;
+        })
+    }
+
+    var player1Stop = function(){
+        $(".stop-1").click(function(){
+         $(".player-1-total-score").text(" " + player1.Score);
+         $(".player-1-score").text(" " + player1.turnScore)
         
-        });
-        
-    });
-   
+         var winner = player1.scoreCheck();
+
+         if (winner === "Win"){
+             alert("congraturation" + player1.playerName + " you win! GAME OVER!")
+         }
+        })
+
+    }
 })
+});
 
