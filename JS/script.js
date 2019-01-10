@@ -25,18 +25,22 @@ Player.prototype.roolDie = function(){
         return "Hit One"
     }
 };
+
 PlayerName.prototype.stop = function(){
     this.score += this.turnscore;
     this.turnScore = 0;
-}
+};
+
 PlayerName.prototype.newTurn = function () {
     this.turnScore = 0;
-}
+};
+
 playerName.prototype.scoreCheck= function() {
     if(this.score >=100){
         return "Winner";
     }
-}
+};
+
 PlayerName.prototype.newGame = function() {
     this.turnScore = 0;
     this.score = 0;
@@ -66,4 +70,25 @@ $(document).ready(function() {
 
     
     });
+    // PLAYER ONE ROLL AND STOP BUTTON BELOW
+
+
+    var player1Rolls = function(){
+        $(".roll-1").click(function() {
+
+          var player1Dice = player1.rollDie();
+
+          $(".player-1-roll").text(" " + player1Dice);
+          $(".player-1-score").text(" " + player1.turnScore);
+          $(".player-1-total-score").text(" " + player1.score);
+
+          if(player1Dice === "Hit One"){
+            $(".buttons-1").fadeOut("slow");
+            $(".buttons-2").fadeIn("slow");
+          };
+
+          var winner = player1.scoreCheck();
+
+        });
+    };
 })
