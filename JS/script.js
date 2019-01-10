@@ -41,3 +41,29 @@ PlayerName.prototype.newGame = function() {
     this.turnScore = 0;
     this.score = 0;
 };
+
+$(document).ready(function() {
+
+    $(".first-row").hide();
+    $(".buttons-1").hide();
+    $(".buttons-2").hide();
+
+    $("#player-name-form").submit(function(event){
+       event.preventDefault();
+
+       var player1input = $("#player-1").val();
+       var player2input = $("#player-2").val();
+
+       $(".player-1-name").text(player1input);
+   
+       $(".player-2-name").text(player2input);
+    
+       var player1 = new Player(player1input, 0, 0);
+       var player2 = new Player(player2input, 0, 0);
+       
+       $(".first-row").fadeIn("fast");
+       $(".buttons-1").fadeIn("slow");
+
+    
+    });
+})
