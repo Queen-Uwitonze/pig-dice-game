@@ -1,77 +1,83 @@
-<!DOCTYPE <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>pig Dice Game</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./CSS/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./CSS/styles.css" />
-    <script src="./JS/jquery-1.11.3.min.js"></script>
-    <script src="./JS/script.js"></script>
-</head>
-<body>
+    <title></title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css"  type="text/css"/>
+    <link rel="stylesheet" href="./CSS/styles.css" type="text/css">
+    <script src='./JS/jquery-1.11.3.min.js'></script>
+    <script src='./JS/script.js'></script>
+
+  </head>
+  <body>
+
+    <img src="img/PIGDICE.png" alt="pig header" class="header-pic"/>
+
     <div class="container">
 
-        <br>
-        <div class="form-style-3">
-          <form id="player-name-form">
-          <fieldset><legend>Start New Game</legend>
-          <label for="field1"><span>Player 1</span><input type="text" id="player-1" class="input-field" name="field1" value="" /></label>
-          <label for="field2"><span>Player 2</span><input type="text" id="player-2" class="input-field" name="field2" value="" /></label>
-          <input type="submit" value="Submit" /></label>
-          </fieldset>
-          </form>
+      <br>
+      <div class="form-style-3">
+        <form id="player-name-form">
+        <fieldset><legend>Start New Game</legend>
+        <label for="field1"><span>Player 1</span><input type="text" id="player-1" class="input-field" name="field1" value="" /></label>
+        <label for="field2"><span>Player 2</span><input type="text" id="player-2" class="input-field" name="field2" value="" /></label>
+        <input type="submit" value="Submit" /></label>
+        </fieldset>
+        </form>
+      </div>
+
+      <br><br>
+
+      <div class="row first-row" >
+
+        <div class="col-sm-4 player-1-div">
+          <h2 class="player-1-name"></h2>
+          <h4>TURN SCORE:<span class="player-1-score"></span></h4>
+          <h4>YOUR TOTAL SCORE:<span class="player-1-total-score"></span></h4>
+          <br><br>
+          <div class="player-1-dice">
+            <h4>YOUR ROLL:<span class="player-1-roll"></span></h4>
+          </div>
         </div>
-  
-        <br><br>
-  
-        <div class="row first-row" >
-  
-          <div class="col-sm-4 player-1-div">
-            <h2 class="player-1-name"></h2>
-            <h4>TURN SCORE:<span class="player-1-score"></span></h4>
-            <h4>YOUR TOTAL SCORE:<span class="player-1-total-score"></span></h4>
+
+        <div class="col-sm-4">
+          <img src="img/pigface.jpg" alt="pig header" class="header-pic"/>
+        </div>
+
+
+        <div class="col-sm-4 player-2-div">
+            <h2 class="player-2-name"></h2>
+            <h4>TURN SCORE:<span class="player-2-score"></span></h4>
+            <h4>YOUR TOTAL SCORE:<span class="player-2-total-score"></span></h4>
             <br><br>
-            <div class="player-1-dice">
-              <h4>YOUR ROLL:<span class="player-1-roll"></span></h4>
+            <div class="player-2-dice">
+              <h4>YOUR ROLL:<span class="player-2-roll"></span></h4>
             </div>
-          </div>
-  
-          
-  
-  
-          <div class="col-sm-4 player-2-div">
-              <h2 class="player-2-name"></h2>
-              <h4>TURN SCORE:<span class="player-2-score"></span></h4>
-              <h4>YOUR TOTAL SCORE:<span class="player-2-total-score"></span></h4>
-              <br><br>
-              <div class="player-2-dice">
-                <h4>YOUR ROLL:<span class="player-2-roll"></span></h4>
-              </div>
-          </div>
-  
         </div>
-  
-        <div class="row" >
-          <div class="col-sm-4">
-            <div class="buttons-1">
-              <button class="roll-1 btn" type="submit">Roll Die</button>
-              <button class="stop-1 btn" type="submit">Stop Turn</button>
-            </div>
-          </div>
-  
-          <div class="col-sm-4">
-          </div>
-  
-          <div class="col-sm-4">
-            <div class="buttons-2">
-              <button class="roll-2 btn" type="submit">Roll Die</button>
-              <button class="stop-2 btn" type="submit">Stop Turn</button>
-            </div>
+
+      </div>
+
+      <div class="row" >
+        <div class="col-sm-4">
+          <div class="buttons-1">
+            <button class="roll-1 btn" type="submit">Roll Die</button>
+            <button class="stop-1 btn" type="submit">Stop Turn</button>
           </div>
         </div>
-  
-    </div>
-</body>
+
+        <div class="col-sm-4">
+        </div>
+
+        <div class="col-sm-4">
+          <div class="buttons-2">
+            <button class="roll-2 btn" type="submit">Roll Die</button>
+            <button class="stop-2 btn" type="submit">Stop Turn</button>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  </body>
 </html>
