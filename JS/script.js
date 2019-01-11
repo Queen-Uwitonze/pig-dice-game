@@ -2,7 +2,7 @@ function Player(playerName,score,turnscore){
     this.playerName = playerName;
     this.score = score;
     this.turnscore = turnscore;
-};
+}
 
 // rollScore refers to one roll of the dice
 // turnScore refers to the total amount of points added from several rolls of the dice
@@ -22,7 +22,7 @@ Player.prototype.rollDice = function(){
     }else{
         rollScore = 0;
         this.turnScore = 0;
-        return "Win"
+        return "Sorry!you hit one."
     }
 };
 
@@ -37,7 +37,7 @@ PlayerName.prototype.newTurn = function () {
 
 playerName.prototype.scoreCheck= function() {
     if(this.score >=100){
-        return "Hit win";
+        return "Win";
     }
 };
 
@@ -81,11 +81,13 @@ $(document).ready(function() {
 
           if (player1Dice === "Hit one"){
               $(".buttons-1").fadeIn("slow")
-              $(".buttons-2").fadeOut("")
+              $(".buttons-2").fadeOut("slow")
           };
+
         var winner = player1.scoreCheck;
-        })
-    }
+
+        });
+    };
 
     var player1Stop = function(){
         $(".stop-1").click(function(){
@@ -95,7 +97,7 @@ $(document).ready(function() {
          var winner = player1.scoreCheck();
 
          if(winner === "Win"){
-            alert("Congratulations " + player1.playerName +" you win! GAME OVER!")
+            alert("Congratulations " + player1.playerName +" you win the GAME")
             player1.newGame();
             player2.newGame();
             $(".player-1-total-score").text(" " + player1.score);
@@ -111,7 +113,25 @@ $(document).ready(function() {
           }
         })
 
-    }
+    };
+    // PLAYER TWO ROLL AND STOP BUTTON BELOW
+
+var player2Rolls = function(){
+    $(".roll-2").click(function(){
+      var player2Dice = player2Dice();
+
+      $(".player2-roll").text(" " + player2Dice);
+      $(".player-2-score").text(" " + player2.turnScore);
+      $(".player-2-total-score").text(" " + player2.score);
+
+      if(player2Dice === "Hit one"){
+      $(".button-2").fadeOut("slow");
+      $(".button-1").fadeIn("slow");
+       }
+       var winner = player2.scoreCheck;
+    })
+}
+
 })
 });
 
