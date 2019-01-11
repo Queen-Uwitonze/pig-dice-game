@@ -55,12 +55,12 @@ function Player(playerName, score, turnScore) {
   }
   
   
-  
   $(document).ready(function() {
   
     $(".first-row").hide();
     $(".buttons-1").hide();
     $(".buttons-2").hide();
+    $(".instructions").show();
   
     $("#player-name-form").submit(function(event) {
       event.preventDefault();
@@ -76,6 +76,7 @@ function Player(playerName, score, turnScore) {
   
       $(".first-row").fadeIn("fast");
       $(".buttons-1").fadeIn("slow");
+
   
   // PLAYER ONE ROLL AND STOP BUTTON BELOW
   
@@ -189,6 +190,8 @@ function Player(playerName, score, turnScore) {
         player1Stops();
         player2Rolls();
         player2Stops();
+
+        
   
     });
   

@@ -138,4 +138,8 @@
       -moz-border-radius: 3px;
       font-weight: bold;
   }
+  .toggle{
+      display: flex;
+     flex-direction: column;
+  }
   
