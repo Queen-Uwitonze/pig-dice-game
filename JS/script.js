@@ -128,7 +128,23 @@ var player2Rolls = function(){
       $(".button-2").fadeOut("slow");
       $(".button-1").fadeIn("slow");
        }
-       var winner = player2.scoreCheck;
+       var winner = player2.scoreCheck();
+    });
+};
+
+var player2Stops = function () {
+  $(".stop-2").click(function(){
+      player2Stop();
+      $(".player-2-total-score").text(" " + player2.score);
+      $(".player-2-score").text(" " + player2.turnScore);
+  
+      var winner = player2.scoreCheck();
+
+      if(winner === "Win"){
+        alert("Congratulations " + player2.playerName +" you win! GAME OVER!")
+        player1.newGame();
+        player2.newGame();
+      }
     })
 }
 
