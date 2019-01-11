@@ -53,7 +53,8 @@
   }
   
   body {
-    background: url(http://s3.amazonaws.com/spoonflower/public/design_thumbnails/0245/9550/pig12x12_mirror.png) repeat center center fixed;
+    background-color:pink;
+    width: 100%;
   }
   
   

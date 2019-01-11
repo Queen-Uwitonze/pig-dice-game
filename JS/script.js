@@ -8,7 +8,7 @@ function Player(playerName,score,turnscore){
 // turnScore refers to the total amount of points added from several rolls of the dice
 // score refers to total score
 
-Player.prototype.roolDice = function(){
+Player.prototype.rollDice = function(){
     var rollScore = 0;
     var diceArray =[];
 
@@ -22,7 +22,7 @@ Player.prototype.roolDice = function(){
     }else{
         rollScore = 0;
         this.turnScore = 0;
-        return "Hit One"
+        return "Win"
     }
 };
 
@@ -37,7 +37,7 @@ PlayerName.prototype.newTurn = function () {
 
 playerName.prototype.scoreCheck= function() {
     if(this.score >=100){
-        return "Winner";
+        return "Hit win";
     }
 };
 
@@ -94,9 +94,21 @@ $(document).ready(function() {
         
          var winner = player1.scoreCheck();
 
-         if (winner === "Win"){
-             alert("congraturation" + player1.playerName + " you win! GAME OVER!")
-         }
+         if(winner === "Win"){
+            alert("Congratulations " + player1.playerName +" you win! GAME OVER!")
+            player1.newGame();
+            player2.newGame();
+            $(".player-1-total-score").text(" " + player1.score);
+            $(".player-1-score").text(" " + player1.turnScore);
+            $(".player-2-total-score").text(" " + player2.score);
+            $(".player-2-score").text(" " + player2.turnScore);
+            $(".player-1-roll").text(" ");
+            $(".player-2-roll").text(" ");
+
+          }else{
+            $(".buttons-1").fadeOut("slow");
+            $(".buttons-2").fadeIn("slow");
+          }
         })
 
     }
