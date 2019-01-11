@@ -144,7 +144,18 @@ var player2Stops = function () {
         alert("Congratulations " + player2.playerName +" you win! GAME OVER!")
         player1.newGame();
         player2.newGame();
-      }
+        $(".player-1-total-score").text(" " + player1.score);
+            $(".player-1-score").text(" " + player1.turnScore);
+            $(".player-2-total-score").text(" " + player2.score);
+            $(".player-2-score").text(" " + player2.turnScore);
+            $(".player-1-roll").text(" ");
+            $(".player-2-roll").text(" ");
+            $(".buttons-2").fadeOut("slow");
+            $(".buttons-1").fadeIn("slow");
+          }else{
+            $(".buttons-2").fadeOut("slow");
+            $(".buttons-1").fadeIn("slow");
+          }
     })
 }
 
