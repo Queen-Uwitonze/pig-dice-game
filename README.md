@@ -14,7 +14,11 @@ If the player rolls any other number, it is added to their turn total and the pl
 If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
 The first player to score 100 or more points wins.
 
-### Setup
+### Technologie used
+
+we used html, css, bootstrap, javascript and jquery.
+
+### Setup & installation instructions
 
 This app was written in jquery-1.11.3.js.
 
@@ -25,7 +29,7 @@ Clone this repo with
 
 Start App:
 
-Open pig_dice.html in any browser.
+Open pig_dice.html in any browser(visual studio).
 
-### License ###
+### contact & license information
 Copyright  (C)  2019  Queen Uwitonze
